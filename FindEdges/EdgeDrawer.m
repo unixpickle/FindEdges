@@ -42,22 +42,21 @@
 	imageCoordinateList coords;
 	int num = 0;
 	while ([finder nextObject:&coords]) {
-		num++;
-		// draw our path
-		// NSLog(@"Found object");
-		CGContextSaveGState(context);
-		CGContextBeginPath(context);
-		for (int i = 0; i < coords.numberOfCoords; i++) {
-			if (i == 0) {
-				CGContextMoveToPoint(context, coords.coords[i].x, coords.coords[i].y);
-			} else {
-				CGContextAddLineToPoint(context, coords.coords[i].x, coords.coords[i].y);
+		if (coords.numberOfCoords > 1) {
+			num++;
+			CGContextSaveGState(context);
+			CGContextBeginPath(context);
+			for (int i = 0; i < coords.numberOfCoords; i++) {
+				if (i == 0) {
+					CGContextMoveToPoint(context, coords.coords[i].x, coords.coords[i].y);
+				} else {
+					CGContextAddLineToPoint(context, coords.coords[i].x, coords.coords[i].y);
+				}
 			}
+			CGContextStrokePath(context);
+			CGContextRestoreGState(context);
+			image_coordinate_list_free(coords);
 		}
-		//CGContextClosePath(context);
-		CGContextStrokePath(context);
-		CGContextRestoreGState(context);
-		image_coordinate_list_free(coords);
 	}
 	const char * text = [[NSString stringWithFormat:@"%d objects", num] UTF8String];
     CGContextSelectFont(context, "Helvetica", 14.0, kCGEncodingMacRoman);

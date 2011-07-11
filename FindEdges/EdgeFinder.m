@@ -8,7 +8,7 @@
 
 #import "EdgeFinder.h"
 
-#define kAlphaMin 20
+#define kAlphaMin 50
 
 imageCoordinate * image_coordinate_list_get (imageCoordinateList list, int index) {
 	return &(list.coords[index]);
@@ -49,6 +49,7 @@ BOOL image_coordinate_is_touching (imageCoordinate coord, imageCoordinate anothe
 
 @interface EdgeFinder (Private)
 
+- (void)getPixel:(unsigned char *)pixel atCoord:(imageCoordinate)point;
 - (BOOL)isPixelEdge:(imageCoordinate)coord;
 - (BOOL)findNextEdge:(imageCoordinate *)nextEdge forEdgePoint:(imageCoordinate)existingEdge;
 
@@ -113,22 +114,27 @@ BOOL image_coordinate_is_touching (imageCoordinate coord, imageCoordinate anothe
 	return NO;
 }
 
+- (void)getPixel:(unsigned char *)pixel atCoord:(imageCoordinate)point {
+	if (point.x < 0 || point.y < 0 || point.x >= imgSize.x || point.y >= imgSize.y) {
+		bzero(pixel, 4);
+		return;
+	}
+	[image get255Pixel:pixel atX:point.x y:point.y];
+}
+
 - (BOOL)isPixelEdge:(imageCoordinate)coord {
 	// go through all sides of the coordinate
 	unsigned char coordPixel[4];
-	[image get255Pixel:coordPixel atX:coord.x y:coord.y];
-	if (coordPixel[3] < kAlphaMin) return NO;
-	if (coord.x < 0 || coord.x >= imgSize.x) return NO;
-	if (coord.y < 0 || coord.y >= imgSize.y) return NO;
+	[self getPixel:coordPixel atCoord:coord];
+	if (coordPixel[3] >= kAlphaMin) return NO;
 	for (int x = coord.x - 1; x <= coord.x + 1; x++) {
 		for (int y = coord.y - 1; y <= coord.y + 1; y++) {
-			if (x >= 0 && x < imgSize.x) {
-				if (y >= 0 && y < imgSize.y) {
-					unsigned char pixel[4];
-					[image get255Pixel:pixel atX:x y:y];
-					if (pixel[3] < kAlphaMin) return YES;
-				} else return YES;
-			} else return YES;
+				unsigned char pixel[4];
+				imageCoordinate coordinate;
+				coordinate.x = x;
+				coordinate.y = y;
+				[self getPixel:pixel atCoord:coordinate];
+				if (pixel[3] >= kAlphaMin) return YES;
 		}
 	}
 	return NO;
@@ -170,10 +176,8 @@ BOOL image_coordinate_is_touching (imageCoordinate coord, imageCoordinate anothe
 
 - (int)numberOfBlanksTouchingSameEdge:(imageCoordinate)coord1 asPixel:(imageCoordinate)coord2 {
 	unsigned char coordPixel[4];
-	[image get255Pixel:coordPixel atX:coord1.x y:coord1.y];
-	if (coordPixel[3] < kAlphaMin) return 0;
-	if (coord1.x < 0 || coord1.x >= imgSize.x) return 0;
-	if (coord1.y < 0 || coord1.y >= imgSize.y) return 0;
+	[self getPixel:coordPixel atCoord:coord1];
+	if (coordPixel[3] >= kAlphaMin) return 0;
 	int count = 0;
 	for (int x = coord1.x - 1; x <= coord1.x + 1; x++) {
 		for (int y = coord1.y - 1; y <= coord1.y + 1; y++) {
@@ -183,9 +187,12 @@ BOOL image_coordinate_is_touching (imageCoordinate coord, imageCoordinate anothe
 			if (image_coordinate_is_touching(coord2, theCoord)) {
 				if (x >= 0 && x < imgSize.x) {
 					if (y >= 0 && y < imgSize.y) {
+						imageCoordinate coordinate;
+						coordinate.x = x;
+						coordinate.y = y;
 						unsigned char pixel[4];
-						[image get255Pixel:pixel atX:x y:y];
-						if (pixel[3] < kAlphaMin) count ++;
+						[self getPixel:pixel atCoord:coordinate];
+						if (pixel[3] >= kAlphaMin) count ++;
 					} else count ++;
 				} else count ++;
 			}

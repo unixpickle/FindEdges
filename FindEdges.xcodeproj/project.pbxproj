@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAEBA2A013CB478200B075E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBA29F13CB478200B075E1 /* UIKit.framework */; };
+		FAEBA2A213CB478200B075E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBA2A113CB478200B075E1 /* Foundation.framework */; };
+		FAEBA2A413CB478200B075E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBA2A313CB478200B075E1 /* CoreGraphics.framework */; };
+		FAEBA2AA13CB478200B075E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2A813CB478200B075E1 /* InfoPlist.strings */; };
+		FAEBA2AD13CB478200B075E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2AC13CB478200B075E1 /* main.m */; };
+		FAEBA2B013CB478200B075E1 /* FindEdgesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2AF13CB478200B075E1 /* FindEdgesAppDelegate.m */; };
+		FAEBA2B313CB478200B075E1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2B113CB478200B075E1 /* MainWindow.xib */; };
+		FAEBA2B613CB478200B075E1 /* FindEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2B513CB478200B075E1 /* FindEdgesViewController.m */; };
+		FAEBA2B913CB478200B075E1 /* FindEdgesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2B713CB478200B075E1 /* FindEdgesViewController.xib */; };
+		FAEBA2CC13CB479B00B075E1 /* ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2C713CB479B00B075E1 /* ANImageBitmapRep.m */; };
+		FAEBA2CD13CB479B00B075E1 /* CGImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2C913CB479B00B075E1 /* CGImageContainer.m */; };
+		FAEBA2CE13CB479B00B075E1 /* CGContextCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2CB13CB479B00B075E1 /* CGContextCreator.m */; };
+		FAEBA2D113CB530900B075E1 /* EdgeFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2D013CB530900B075E1 /* EdgeFinder.m */; };
+		FAEBA2D413CB5BB500B075E1 /* EdgeDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEBA2D313CB5BB500B075E1 /* EdgeDrawer.m */; };
+		FAEBA2D613CB5CF600B075E1 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2D513CB5CF600B075E1 /* trash.png */; };
+		FAEBA2D813CB614800B075E1 /* recycling.png in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2D713CB614800B075E1 /* recycling.png */; };
+		FAEBA2E413CB78C600B075E1 /* pickle.png in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2E313CB78C600B075E1 /* pickle.png */; };
+		FAEBA2E613CB992900B075E1 /* monkeys.png in Resources */ = {isa = PBXBuildFile; fileRef = FAEBA2E513CB992900B075E1 /* monkeys.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FAEBA29B13CB478200B075E1 /* FindEdges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindEdges.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEBA29F13CB478200B075E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FAEBA2A113CB478200B075E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAEBA2A313CB478200B075E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FAEBA2A713CB478200B075E1 /* FindEdges-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindEdges-Info.plist"; sourceTree = "<group>"; };
+		FAEBA2A913CB478200B075E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAEBA2AB13CB478200B075E1 /* FindEdges-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FindEdges-Prefix.pch"; sourceTree = "<group>"; };
+		FAEBA2AC13CB478200B075E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAEBA2AE13CB478200B075E1 /* FindEdgesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindEdgesAppDelegate.h; sourceTree = "<group>"; };
+		FAEBA2AF13CB478200B075E1 /* FindEdgesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindEdgesAppDelegate.m; sourceTree = "<group>"; };
+		FAEBA2B213CB478200B075E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FAEBA2B413CB478200B075E1 /* FindEdgesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindEdgesViewController.h; sourceTree = "<group>"; };
+		FAEBA2B513CB478200B075E1 /* FindEdgesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindEdgesViewController.m; sourceTree = "<group>"; };
+		FAEBA2B813CB478200B075E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FindEdgesViewController.xib; sourceTree = "<group>"; };
+		FAEBA2C613CB479B00B075E1 /* ANImageBitmapRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANImageBitmapRep.h; sourceTree = "<group>"; };
+		FAEBA2C713CB479B00B075E1 /* ANImageBitmapRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANImageBitmapRep.m; sourceTree = "<group>"; };
+		FAEBA2C813CB479B00B075E1 /* CGImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGImageContainer.h; sourceTree = "<group>"; };
+		FAEBA2C913CB479B00B075E1 /* CGImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGImageContainer.m; sourceTree = "<group>"; };
+		FAEBA2CA13CB479B00B075E1 /* CGContextCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGContextCreator.h; sourceTree = "<group>"; };
+		FAEBA2CB13CB479B00B075E1 /* CGContextCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGContextCreator.m; sourceTree = "<group>"; };
+		FAEBA2CF13CB530900B075E1 /* EdgeFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeFinder.h; sourceTree = "<group>"; };
+		FAEBA2D013CB530900B075E1 /* EdgeFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeFinder.m; sourceTree = "<group>"; };
+		FAEBA2D213CB5BB500B075E1 /* EdgeDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeDrawer.h; sourceTree = "<group>"; };
+		FAEBA2D313CB5BB500B075E1 /* EdgeDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeDrawer.m; sourceTree = "<group>"; };
+		FAEBA2D513CB5CF600B075E1 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
+		FAEBA2D713CB614800B075E1 /* recycling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recycling.png; sourceTree = "<group>"; };
+		FAEBA2E313CB78C600B075E1 /* pickle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickle.png; sourceTree = "<group>"; };
+		FAEBA2E513CB992900B075E1 /* monkeys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkeys.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAEBA29813CB478200B075E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEBA2A013CB478200B075E1 /* UIKit.framework in Frameworks */,
+				FAEBA2A213CB478200B075E1 /* Foundation.framework in Frameworks */,
+				FAEBA2A413CB478200B075E1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAEBA29013CB478200B075E1 = {
+			isa = PBXGroup;
+			children = (
+				FAEBA2BF13CB478D00B075E1 /* ANImageBitmapRep */,
+				FAEBA2A513CB478200B075E1 /* FindEdges */,
+				FAEBA29E13CB478200B075E1 /* Frameworks */,
+				FAEBA29C13CB478200B075E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAEBA29C13CB478200B075E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBA29B13CB478200B075E1 /* FindEdges.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAEBA29E13CB478200B075E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBA29F13CB478200B075E1 /* UIKit.framework */,
+				FAEBA2A113CB478200B075E1 /* Foundation.framework */,
+				FAEBA2A313CB478200B075E1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAEBA2A513CB478200B075E1 /* FindEdges */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBA2AE13CB478200B075E1 /* FindEdgesAppDelegate.h */,
+				FAEBA2AF13CB478200B075E1 /* FindEdgesAppDelegate.m */,
+				FAEBA2B413CB478200B075E1 /* FindEdgesViewController.h */,
+				FAEBA2B513CB478200B075E1 /* FindEdgesViewController.m */,
+				FAEBA2CF13CB530900B075E1 /* EdgeFinder.h */,
+				FAEBA2D013CB530900B075E1 /* EdgeFinder.m */,
+				FAEBA2D213CB5BB500B075E1 /* EdgeDrawer.h */,
+				FAEBA2D313CB5BB500B075E1 /* EdgeDrawer.m */,
+				FAEBA2A613CB478200B075E1 /* Supporting Files */,
+			);
+			path = FindEdges;
+			sourceTree = "<group>";
+		};
+		FAEBA2A613CB478200B075E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBA2E513CB992900B075E1 /* monkeys.png */,
+				FAEBA2E313CB78C600B075E1 /* pickle.png */,
+				FAEBA2D713CB614800B075E1 /* recycling.png */,
+				FAEBA2D513CB5CF600B075E1 /* trash.png */,
+				FAEBA2B113CB478200B075E1 /* MainWindow.xib */,
+				FAEBA2B713CB478200B075E1 /* FindEdgesViewController.xib */,
+				FAEBA2A713CB478200B075E1 /* FindEdges-Info.plist */,
+				FAEBA2A813CB478200B075E1 /* InfoPlist.strings */,
+				FAEBA2AB13CB478200B075E1 /* FindEdges-Prefix.pch */,
+				FAEBA2AC13CB478200B075E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAEBA2BF13CB478D00B075E1 /* ANImageBitmapRep */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBA2C613CB479B00B075E1 /* ANImageBitmapRep.h */,
+				FAEBA2C713CB479B00B075E1 /* ANImageBitmapRep.m */,
+				FAEBA2C813CB479B00B075E1 /* CGImageContainer.h */,
+				FAEBA2C913CB479B00B075E1 /* CGImageContainer.m */,
+				FAEBA2CA13CB479B00B075E1 /* CGContextCreator.h */,
+				FAEBA2CB13CB479B00B075E1 /* CGContextCreator.m */,
+			);
+			name = ANImageBitmapRep;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAEBA29A13CB478200B075E1 /* FindEdges */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEBA2BC13CB478200B075E1 /* Build configuration list for PBXNativeTarget "FindEdges" */;
+			buildPhases = (
+				FAEBA29713CB478200B075E1 /* Sources */,
+				FAEBA29813CB478200B075E1 /* Frameworks */,
+				FAEBA29913CB478200B075E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindEdges;
+			productName = FindEdges;
+			productReference = FAEBA29B13CB478200B075E1 /* FindEdges.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAEBA29213CB478200B075E1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FAEBA29513CB478200B075E1 /* Build configuration list for PBXProject "FindEdges" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FAEBA29013CB478200B075E1;
+			productRefGroup = FAEBA29C13CB478200B075E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAEBA29A13CB478200B075E1 /* FindEdges */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAEBA29913CB478200B075E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEBA2AA13CB478200B075E1 /* InfoPlist.strings in Resources */,
+				FAEBA2B313CB478200B075E1 /* MainWindow.xib in Resources */,
+				FAEBA2B913CB478200B075E1 /* FindEdgesViewController.xib in Resources */,
+				FAEBA2D613CB5CF600B075E1 /* trash.png in Resources */,
+				FAEBA2D813CB614800B075E1 /* recycling.png in Resources */,
+				FAEBA2E413CB78C600B075E1 /* pickle.png in Resources */,
+				FAEBA2E613CB992900B075E1 /* monkeys.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAEBA29713CB478200B075E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEBA2AD13CB478200B075E1 /* main.m in Sources */,
+				FAEBA2B013CB478200B075E1 /* FindEdgesAppDelegate.m in Sources */,
+				FAEBA2B613CB478200B075E1 /* FindEdgesViewController.m in Sources */,
+				FAEBA2CC13CB479B00B075E1 /* ANImageBitmapRep.m in Sources */,
+				FAEBA2CD13CB479B00B075E1 /* CGImageContainer.m in Sources */,
+				FAEBA2CE13CB479B00B075E1 /* CGContextCreator.m in Sources */,
+				FAEBA2D113CB530900B075E1 /* EdgeFinder.m in Sources */,
+				FAEBA2D413CB5BB500B075E1 /* EdgeDrawer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAEBA2A813CB478200B075E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEBA2A913CB478200B075E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAEBA2B113CB478200B075E1 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEBA2B213CB478200B075E1 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FAEBA2B713CB478200B075E1 /* FindEdgesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEBA2B813CB478200B075E1 /* en */,
+			);
+			name = FindEdgesViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAEBA2BA13CB478200B075E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAEBA2BB13CB478200B075E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FAEBA2BD13CB478200B075E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindEdges/FindEdges-Prefix.pch";
+				INFOPLIST_FILE = "FindEdges/FindEdges-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FAEBA2BE13CB478200B075E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindEdges/FindEdges-Prefix.pch";
+				INFOPLIST_FILE = "FindEdges/FindEdges-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAEBA29513CB478200B075E1 /* Build configuration list for PBXProject "FindEdges" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEBA2BA13CB478200B075E1 /* Debug */,
+				FAEBA2BB13CB478200B075E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEBA2BC13CB478200B075E1 /* Build configuration list for PBXNativeTarget "FindEdges" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEBA2BD13CB478200B075E1 /* Debug */,
+				FAEBA2BE13CB478200B075E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAEBA29213CB478200B075E1 /* Project object */;
+}
